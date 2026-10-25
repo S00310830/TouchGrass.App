@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990168510849",
+    "project_id": "touchgrass-791f8",
+    "storage_bucket": "touchgrass-791f8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990168510849:android:27ce41acae26efb3e27880",
+        "android_client_info": {
+          "package_name": "com.example.spike_localdb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfpbEVo0k_nSCpcFFv_rssOC-zpqmDH7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
