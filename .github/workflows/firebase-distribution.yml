@@ -29,9 +29,8 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: Upload APK to Firebase App Distribution
-        uses: FirebaseExtended/action-app-distribution@v3.0.0
+        uses: w9jds/firebase-action@master
         with:
-          appId: 1:990168510849:android:27ce41acae26efb3e27880
-          serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          file: app/build/outputs/apk/debug/app-debug.apk
-          releaseNotes: "Automated build from GitHub Actions"
+          args: appdistribution:distribute app/build/outputs/apk/debug/app-debug.apk --app 1:990168510849:android:27ce41acae26efb3e27880
+        env:
+          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
