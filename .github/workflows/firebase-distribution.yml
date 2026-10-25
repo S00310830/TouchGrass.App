@@ -32,6 +32,9 @@ jobs:
         uses: ReactiveCircus/android-emulator-runner@v2
         with:
           api-level: 29
+          arch: x86_64
+          target: google_apis
+          disable-animation: true
           script: ./gradlew connectedCheck
           
       - name: Build Debug APK
