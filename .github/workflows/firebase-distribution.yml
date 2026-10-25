@@ -28,6 +28,12 @@ jobs:
       - name: Run Local Unit Tests
         run: ./gradlew testDebugUnitTest
         
+      - name: Enable KVM group permissions
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm-udev.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+          
       - name: Run Instrumented UI Tests on Emulator
         uses: ReactiveCircus/android-emulator-runner@v2
         with:
