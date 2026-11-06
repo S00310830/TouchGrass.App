@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SpikeLocalDBTheme {
                 //put the db helper in the UI so the UI can call DB functions
-                NotesScreen(databaseHelper)
+                TouchGrassApp()
             }
         }
     }
